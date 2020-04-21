@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="RESUMEN DE COMPRAS Y VENTAS"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/from"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="Desde"
+        android:layout_below="@id/title"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/to"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_below="@id/title"
+        android:layout_toEndOf="@id/from"
+        android:hint="Hata"
+        android:focusable="false"
+        android:clickable="true"
+        android:maxLines="1"/>
+
+    <ImageButton
+        android:id="@+id/btnFiltro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_search"
+        android:background="@android:color/transparent"
+        android:layout_toEndOf="@id/to"
+        android:layout_below="@id/title"/>
+
+    <TextView
+        android:id="@+id/contenidojson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/from"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
